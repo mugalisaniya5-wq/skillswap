@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap | Learn Together</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <h1>SkillSwap ✨</h1>
+    <a href="#home">Home</a>
+    <a href="#skills">Explore Skills</a>
+    <a href="#join">Join Us</a>
+    <a href="#matches">Find Matches</a>
+    <a href="#chat">Chat</a>
+</nav>
+
+<section class="hero" id="home">
+    <span class="badge">LEARN • SHARE • GROW</span>
+    <h2>Share What You Know.<br>Learn What You Love.</h2>
+    <p>Exchange skills, meet people, and grow together.</p>
+    <a href="#skills" class="button">Explore Skills →</a>
+    <a href="#join" class="button secondary">Join SkillSwap</a>
+</section>
+
+<section class="skills" id="skills">
+    <h2>Discover Skills</h2>
+    <p>What would you like to learn?</p>
+
+    <div class="search">
+        <input type="text" id="skillInput"
+               placeholder="Search Python, Design, English...">
+        <button onclick="searchSkill()">Search</button>
+    </div>
+
+    <p id="searchMessage" aria-live="polite"></p>
+
+    <div id="result" class="cards">
+        <div class="card">
+            <h3>💻 Python</h3>
+            <p>Learn programming basics.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 Graphic Design</h3>
+            <p>Explore your creativity.</p>
+        </div>
+
+        <div class="card">
+            <h3>🗣️ English</h3>
+            <p>Improve communication skills.</p>
+        </div>
+
+        <div class="card">
+            <h3>📸 Photography</h3>
+            <p>Learn to capture moments.</p>
+        </div>
+
+        <div class="card">
+            <h3>☕ Java</h3>
+            <p>Learn object-oriented programming.</p>
+        </div>
+
+        <div class="card">
+            <h3>🤖 Machine Learning</h3>
+            <p>Explore artificial intelligence.</p>
+        </div>
+    </div>
+</section>
+
+<section class="join" id="join">
+    <h2>Create Your Profile</h2>
+    <p>Teach one skill and learn another.</p>
+
+    <form id="profileForm">
+        <input type="text" id="userName"
+               placeholder="Your name" required maxlength="60">
+
+        <input type="text" id="teachSkill"
+               placeholder="Skill you can teach" required maxlength="80">
+
+        <input type="text" id="learnSkill"
+               placeholder="Skill you want to learn" required maxlength="80">
+
+        <button type="submit">Create Profile</button>
+    </form>
+
+    <p id="message" aria-live="polite"></p>
+</section>
+
+<section class="matches" id="matches">
+    <h2>🤝 Skill Matches</h2>
+    <p>Find learners who can exchange skills with you.</p>
+
+    <div id="matchResults" class="cards"></div>
+</section>
+
+<section class="profiles">
+    <h2>👥 Community Profiles</h2>
+    <p>Profiles saved in this browser.</p>
+
+    <div id="profileList" class="cards"></div>
+</section>
+
+<section class="chat" id="chat">
+    <h2>💬 Demo Chat</h2>
+    <p>Try sending a message in this local demonstration.</p>
+
+    <div id="chatBox" class="chat-box"
+         aria-live="polite">
+        <p class="empty">Your conversation will appear here.</p>
+    </div>
+
+    <form id="chatForm">
+        <input type="text" id="chatInput"
+               placeholder="Type a message..."
+               required maxlength="500">
+        <button type="submit">Send</button>
+    </form>
+
+    <p class="note">
+        Demo only: messages are displayed in this browser and are not
+        delivered to other users.
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 SkillSwap | Learn Together, Grow Together 💜</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
